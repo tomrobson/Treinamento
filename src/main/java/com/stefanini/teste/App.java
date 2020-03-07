@@ -2,6 +2,8 @@ package com.stefanini.teste;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import javax.enterprise.inject.se.SeContainer;
@@ -54,13 +56,12 @@ public class App {
 	}
 
 	private void encontrar() {
-		Optional<Pessoa> pessoa = servicoPessoa.encontrar(5L);
-		if (pessoa.isPresent()) {
-			System.out.println("Pessoa encontrada");
-			System.out.println(pessoa.get());
-		} else {
-			System.out.println("Pessoa não encontrada");
-		}
+		List<Pessoa> pessoa = new ArrayList();
+		pessoa = servicoPessoa.getPessoaByNome("JOAO");
+		
+		for(Pessoa p: pessoa) {
+            System.out.println(p);
+        }
 	}
 
 	private void buscarTodos() {

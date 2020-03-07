@@ -60,9 +60,17 @@ public class PessoaServico implements IGenericService<Pessoa, Long> {
 	/**
 	 * Buscar uma Pessoa pelo ID
 	 */
+	
+	public List<Pessoa> getPessoaByNome(String nome) {
+		return dao.getList(nome);
+	}
+
+
 	@Override
 	public Optional<Pessoa> encontrar(Long id) {
-		return dao.encontrar(id);
+		// TODO Auto-generated method stub
+		return null;
 	}
+	
 
 }

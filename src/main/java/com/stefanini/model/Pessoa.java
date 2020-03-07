@@ -12,6 +12,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "TB_PESSOA")
+@NamedQueries({ @NamedQuery(name = "Pessoa.findByNome", query = "select u from Pessoa u where u.nome=:nome") })
 public class Pessoa implements Serializable{
 
 	
