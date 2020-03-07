@@ -78,7 +78,7 @@ public class App {
 	public void salvar() {
 
 		Pessoa pessoa = new Pessoa("JOAO", null, LocalDate.of(1995, 8, 24), true);
-		pessoa.setEmail("joaom33.dev@hotmail.com");
+		pessoa.setEmail("joaom1.dev@hotmail.com");
 		servicoPessoa.salvar(pessoa);
 		
 		Endereco endereco = new Endereco("123456", "DF", "Brasilia", "Riacho Fundo II", "Rua qualquer", "Rua", pessoa);

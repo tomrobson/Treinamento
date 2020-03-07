@@ -6,6 +6,12 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "tb_endereco")
+//@NamedQueries(value = {
+//		@NamedQuery(name = "Endereco.findByEndereco",
+//				query = "select p from Endereco p where p.uf=:uf"),
+//		@NamedQuery(name = "Pessoa.findEnderecosAndPessoa",
+//				query = "select  p from Endereco p  JOIN FETCH p.pessoa  where p.uf=:uf")
+//})
 public class Endereco implements Serializable {
 
     /**
